@@ -1,0 +1,151 @@
+/* style.css */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+#generateVideoForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #e0e0e0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    width: 80%;
+    max-width: 600px;
+}
+
+#generateVideoForm label,
+#generateVideoForm input,
+#generateVideoForm textarea,
+#generateVideoForm button,
+#generateVideoForm select {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+#generateVideoForm input,
+#generateVideoForm textarea,
+#generateVideoForm select {
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+#generateVideoForm textarea {
+    resize: none;
+}
+
+#generateVideoForm button {
+    background-color: #ff004f;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#generateVideoForm button:hover {
+    background-color: #e60046;
+}
+
+#videoDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+#videoDetails img {
+    max-width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#videoDetails p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.curiosity {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.curiosity textarea {
+    margin-right: 10px;
+    flex-grow: 1;
+    resize: none;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.curiosity button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.curiosity button:hover {
+    background-color: #d32f2f;
+}
+
+#addCuriosityButton {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+#addCuriosityButton:hover {
+    background-color: #45a049;
+}
+#musicDetails {
+    text-align: center;
+}
+
+#musicDetails img {
+    display: block;
+    margin: 0 auto;
+}
+
+#musicTitle.bold {
+    font-weight: bold;
+}
+
+#videoDetails {
+    text-align: center;
+}
+
+#videoDetails img {
+    display: block;
+    margin: 0 auto;
+}
+
+#videoDetails.bold {
+    font-weight: bold;
+}

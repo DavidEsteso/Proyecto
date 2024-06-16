@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Video</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <form id="generateVideoForm">
+        <h1>Generate Video</h1>
+        <label for="videoType">Video Type:</label>
+        <select id="videoType" name="videoType" onchange="toggleVideoType()">
+            <option value="facts">Facts</option>
+            <option value="narration">Narration</option>
+        </select>
+        <div id="factsContainer">
+            <label>Facts:</label>
+            <div class="fact">
+                <input type="text" id="fact[]" name="fact[]" rows="4" cols="50" placeholder="Enter fact" oninput="validateText()">
+                <button type="button" onclick="removeFact(this)">Remove</button>
+            </div>
+            <button type="button" id="addFactButton" onclick="addFact()">Add Fact</button>
+        </div>
+        <div id="narrationContainer" style="display: none;">
+            <label for="narrationText">Narration Text:</label>
+            <input type="text" id="narrationText" name="narrationText" rows="4" cols="50" placeholder="Enter narration" oninput="validateText()">
+        </div>
+        <label for="videoLink">YouTube Video Link:</label>
+        <input type="text" id="videoLink" name="videoLink" oninput="videoLinkListener()">
+        <div id="videoDetails">
+            <img id="videoThumbnail" src="" alt="Thumbnail" style="display: none;">
+            <p id="videoTitle"></p>
+        </div>
+        <label for="musicLink" id="musicLinkLabel" style="display: none;">YouTube Music Link:</label>
+        <input type="text" id="musicLink" name="musicLink" style="display: none;" oninput="musicLinkListener()">
+        <div id="musicDetails" style="display: none;">
+            <img id="musicThumbnail" src="" alt="Thumbnail" style="display: none;">
+            <p id="musicTitle" class="bold"></p>
+        </div>
+        <button type="button" id="toggleMusicButton" onclick="toggleMusicSection()">Add Music to Video</button>
+        <button type="submit" id="generateVideoButton" disabled="true" onclick="generateVideo()">Generate Video</button>
+    </form>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
